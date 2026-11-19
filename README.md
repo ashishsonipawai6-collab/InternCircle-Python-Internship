@@ -1,49 +1,43 @@
-# Web Scraper for Headlines & Quotes
 
-## Project Overview
-This project is a Python web scraper that extracts publicly available quotes, authors, and tags from Quotes to Scrape.
+# Project 05 - Weather App
+
+## Description
+A Python CLI Weather App that fetches live weather
+information using the OpenWeather API.
 
 ## Features
-- Fetches public web pages using Requests.
-- Extracts quotes using BeautifulSoup.
-- Collects author names and tags.
-- Scrapes up to 20 quotes from two pages.
-- Saves extracted data in JSON format.
-- Handles HTTP errors, timeouts, and missing HTML elements.
-- Uses a one-second delay between page requests.
+- Search weather by city name
+- Current temperature
+- Humidity and feels-like temperature
+- Weather condition and wind speed
+- Upcoming weather forecast
+- Error handling
+- JSON response parsing
 
-## Source Website
-https://quotes.toscrape.com/
-
-## Why This Source?
-I selected Quotes to Scrape because it is a public practice website for learning web scraping. It does not require login or personal information.
-
-## Technologies Used
+## Technologies
 - Python
 - Requests
-- BeautifulSoup
+- OpenWeather API
 - JSON
-- Time Module
+- python-dotenv
 
 ## Installation
-Install the required libraries:
 
-`python -m pip install -r requirements.txt`
+Install required libraries:
 
-## How to Run
-Run the following command:
+pip install requests python-dotenv
 
-`python web_scraper.py`
+## Setup
 
-## Output
-The extracted quotes, authors, and tags are saved in `quotes.json`.
+Create a .env file and add:
 
-## Learning Outcomes
-- HTTP requests
-- HTML parsing
-- CSS selectors
-- Error handling
-- JSON data storage
+API_KEY=your_api_key
 
-## Responsible Scraping
-The program makes only two page requests, waits one second between requests, and does not collect personal information.
+Replace it with your actual API key.
+
+## Run
+
+python weather_app.py
+
+## Security
+The API key is stored in .env and is not uploaded to GitHub.
