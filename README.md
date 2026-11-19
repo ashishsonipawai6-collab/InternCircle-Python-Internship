@@ -1,37 +1,49 @@
-# Personal Expense Tracker with CSV
+# Web Scraper for Headlines & Quotes
 
 ## Project Overview
-A beginner-friendly Python application to manage daily expenses and store them permanently in a CSV file.
+This project is a Python web scraper that extracts publicly available quotes, authors, and tags from Quotes to Scrape.
 
 ## Features
-- Add new expenses
-- View all expenses
-- Filter expenses by category
-- Calculate category-wise totals
-- Store data using CSV files
-- Validate dates and amounts
+- Fetches public web pages using Requests.
+- Extracts quotes using BeautifulSoup.
+- Collects author names and tags.
+- Scrapes up to 20 quotes from two pages.
+- Saves extracted data in JSON format.
+- Handles HTTP errors, timeouts, and missing HTML elements.
+- Uses a one-second delay between page requests.
+
+## Source Website
+https://quotes.toscrape.com/
+
+## Why This Source?
+I selected Quotes to Scrape because it is a public practice website for learning web scraping. It does not require login or personal information.
 
 ## Technologies Used
 - Python
-- CSV Module
-- File Handling
-- Dictionaries
-- Functions
-- Exception Handling
+- Requests
+- BeautifulSoup
+- JSON
+- Time Module
+
+## Installation
+Install the required libraries:
+
+`python -m pip install -r requirements.txt`
 
 ## How to Run
-1. Download the project files.
-2. Open the project folder in VS Code.
-3. Run:
+Run the following command:
 
-`python expense_tracker.py`
+`python web_scraper.py`
 
-## Files
-- expense_tracker.py – Main Python program
-- expenses.csv – Sample expense records
+## Output
+The extracted quotes, authors, and tags are saved in `quotes.json`.
 
-## Problem Fixed
-Initially, CSV file handling on Windows can create unwanted blank lines. I fixed this by opening CSV files with `newline=''`.
+## Learning Outcomes
+- HTTP requests
+- HTML parsing
+- CSS selectors
+- Error handling
+- JSON data storage
 
-## Sample Data
-The expenses.csv file contains 10 sample expense records using fictional data.
+## Responsible Scraping
+The program makes only two page requests, waits one second between requests, and does not collect personal information.
